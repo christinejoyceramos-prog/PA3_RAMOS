@@ -45,7 +45,8 @@ use column labels.
 
 CODE
 ---
-"import pandas as pd // this imports the pandas library as pd
+```
+import pandas as pd // this imports the pandas library as pd
 
 cars = pd.read_csv('cars.csv') // this loads the data set named "cars" in the data frame // it displays the cars Data Frame
 
@@ -54,7 +55,8 @@ print("Column names:", cars.columns.tolist()) // this shows the list of the colu
 
 cars_6_to_10 = cars.iloc[5:10] // this selects rows 6 through 10
 selected_columns = ['Model', 'mpg', 'cyl', 'hp', 'gear']
-cars_6_to_10_subset = cars_6_to_10[selected_columns]"
+cars_6_to_10_subset = cars_6_to_10[selected_columns]
+```
 
 OUTPUT
 ---
@@ -79,12 +81,14 @@ locate either model
 
 CODE
 ---
+```
 toyota = cars[cars['Model'] == 'Toyota Corolla'] // this filters the data set for only the Toyota Carolla using Boolean indexing
 display(toyota) // displays the full dataset of Toyota Corolla
 
 pontiac = cars[cars['Model'] == 'Pontiac Firebird'][['Model', 'mpg', 'hp', 'wt']] // filter the dataset of Pontiac Firebird and only retains the specified columns 
 
 display(pontiac) // displays the specified columns of Pontiac Firebird
+```
 
 OUTPUT
 ---
@@ -104,6 +108,7 @@ Required check: The final DataFrame must contain exactly three rows and five col
 
 CODE
 ---
+```
 target_models = ['Datsun 710', 'Lotus Europa', 'Ferrari Dino'] // list of the specified car models
 
 target_cols = ['Model', 'mpg', 'cyl', 'hp', 'gear'] // list of the specified columns
@@ -113,6 +118,7 @@ selected_cars = cars[cars['Model'].isin(target_models)][target_cols] // selects 
 display(selected_cars) // this displays the final dataset for the required models
 
 print("Shape of selected_cars:", selected_cars.shape) // this prints the shape to satisfy the required check.
+```
 
 OUTPUT
 ---
